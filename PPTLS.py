@@ -85,9 +85,9 @@ print('Spock!')
 time.sleep(0.3)
 #mostrando os resultados
 if game_res == 'empate':
-  print('{}O computador jogou: {}{}{}\nVocê jogou: {}{}{}\nResultado {}'.format(col_d, col_y, opções[choice_pc], col_d, col_y, opções[choice_pl], col_d, game))
+  print(f'{col_d}O computador jogou: {col_y}{opções[choice_pc]}{col_d}\nVocê jogou: {col_y}{opções[choice_pl]}{col_d}\nResultado {game}')
 elif game_res == 'derrota':
-  print('{}O computador jogou: {}{}{}\nVocê jogou: {}{}{}\nResultado {}\n{} {}{}{} {}'.format(col_d, col_y, opções[choice_pc], col_d, col_y, opções[choice_pl], col_d, game, opções[choice_pc], col_y, action.upper(), col_d, opções[choice_pl]))
+  print(f'{col_d}O computador jogou: {col_y}{opções[choice_pc]}{col_d}\nVocê jogou: {col_y}{opções[choice_pl]}{col_d}\nResultado {game}\n{opções[choice_pc]} {col_y}{action.upper()}{col_d} {opções[choice_pl]}')
 else:
-  print('{}O computador jogou: {}{}{}\nVocê jogou: {}{}{}\nResultado {}\n{} {}{}{} {}'.format(col_d, col_y, opções[choice_pc], col_d, col_y, opções[choice_pl], col_d, game, opções[choice_pl], col_y, action.upper(), col_d, opções[choice_pc]))
+  print(f'{col_d}O computador jogou: {col_y}{opções[choice_pc]}{col_d}\nVocê jogou: {col_y}{opções[choice_pl]}{col_d}\nResultado {game}\n{opções[choice_pl]} {col_y}{action.upper()}{col_d} {opções[choice_pc]}')
   
