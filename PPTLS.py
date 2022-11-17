@@ -6,12 +6,23 @@ col_r = '\033[0;31;40m'
 col_g = '\033[0;32;40m'
 col_y = '\033[0;33;40m'
 col_d = '\033[0;37;40m'
+#definindo as opções de jogada
+opções = ['Pedra', 'Papel', 'Tesoura', 'Lagarto', 'Spock']
 #mensagens iniciais
 print('Vamos jogar Pedra-papel-tesoura-lagarto-Spock')
 print('Escolha a sua jogada:\n[0]Pedra\n[1]Papel\n[2]Tesoura\n[3]Lagarto\n[4]Spock')
 #tracking das escolhas do jogador e da IA
-choice_pl = int(input(f'Qual a sua jogada? {col_y}'))
 choice_pc = int(random.randint(0,4))
+while True:
+  try:
+    choice_pl = int(input(f'Qual a sua jogada? {col_y}'))
+  except:
+    print(f'{col_r}ERRO!{col_d}\nEscolha a sua jogada:\n[0]Pedra\n[1]Papel\n[2]Tesoura\n[3]Lagarto\n[4]Spock')
+  else:
+    if -1 < choice_pl < 5:
+      break
+    else:
+      print(f'{col_r}ERRO!{col_d} Opção inválida')
 #calculando os resultados
 if choice_pc == choice_pl:
   game = str(f'{col_y}EMPATE!{col_d}')
@@ -71,7 +82,6 @@ else:
       action = str('evapora')
     elif choice_pl == 2 and choice_pc == 4:
       action = str('quebra')
-opções = ('Pedra', 'Papel', 'Tesoura', 'Lagarto', 'Spock')
 for c in range(0, 5):
   time.sleep(0.3)
   print(f'{opções[c]}')
